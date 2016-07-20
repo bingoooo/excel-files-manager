@@ -4,6 +4,7 @@
 'use strict';
 
 var Excel = require('exceljs');
+var $ = require('jquery');
 
 console.log('sourced : renderer.js');
 
@@ -18,4 +19,5 @@ Create.addEventListener('click', ()=>{
 	var Infos =  document.getElementById('infos-field');
 	Infos.innerHTML = 'New File ' + workbook.creator + ' Created ' + workbook.created;
 });
+console.log($('create'));
 console.log(workbook);
