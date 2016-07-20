@@ -3,16 +3,28 @@
   <head>
     <meta charset="UTF-8">
     <title>Hello World!</title>
+    <link rel="stylesheet" type="text/css" href="./semantic/dist/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
-  <body>
-    <h2>Excel Files Generator</h2>
-    <!-- All of the Node.js APIs are available in this renderer process. -->
-    We are using node <script>document.write(process.versions.node)</script>,
-    Chromium <script>document.write(process.versions.chrome)</script>,
-    and Electron <script>document.write(process.versions.electron)</script>.
-    <p>A project by Benjamin Dant</p>
-    <button id="create">New File</button>
-    <div id="infos-field"></div>
+  <body class="ui container">
+    <div class="ui grid">
+      <h2 class="ui fifteen wide column header">Excel Files Generator</h2>
+      <!-- All of the Node.js APIs are available in this renderer process. -->
+      <input type="text" name="filename" class="ui five wide column input" placeholder="File Name" />
+      <button id="create" class="ui button">New File</button>
+      <div id="infos-field" class="ui header"></div>
+      <div class="bd-infos">
+        <p>
+        We are using node <script>document.write(process.versions.node)</script>,
+        Chromium <script>document.write(process.versions.chrome)</script>,
+        and Electron <script>document.write(process.versions.electron)</script>. 
+        </p>
+        <p class="ui header">A project by Benjamin Dant</p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="./semantic/dist/semantic.min.js"></script>
   </body>
 
   <script>
