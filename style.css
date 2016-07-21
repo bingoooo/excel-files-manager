@@ -2,7 +2,20 @@ body {
 	margin: 1em;
 }
 
+#credits:hover {
+	cursor: pointer;
+}
+
+#modal {
+	background-color: black;
+}
+
 .bd-infos {
+	background-color: white;
+	text-align: center;
 	position: fixed;
+}
+
+.hide {
 	display: none;
 }
