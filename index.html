@@ -7,19 +7,51 @@
     <link rel="stylesheet" type="text/css" href="./style.css">
   </head>
   <body class="ui container">
-    <div class="ui grid">
+    <div>
       <!-- All of the Node.js APIs are available in this renderer process. -->
-      <a id="credits">credits</a>
-      <input type="text" name="filename" class="ui five wide column input" placeholder="File Name" />
-      <button id="create" class="ui button">New File</button>
-      <div id="infos-field" class="ui header"></div>
+
+      <!-- menu bar TODO -->
+      <nav id="menu">
+        <ul class="ui horizontal text menu">
+          <a id="new" class="item">New File</a>
+          <a id="open" class="item">Open</a>
+          <a id="credits" class="ui right item">Credits</a>
+        </ul>
+      </nav>
+
+
+      <!-- main -->
+      <section id="main-content">
+        
+        <!-- react objects insertion -->
+        <div id="react"></div>
+
+      </section>
+
+
     </div>
-    <div id="react"></div>
-    <div id="modal">
+
+    <!-- New file Modal Box -->
+    <div id="new-file-modal" class="modal hide">
+      <div class="bd-box">
+        <div class="ui action input fluid">
+          <input type="text" id="filename" name="filename" placeholder="File Name" />
+          <button id="create" class="ui button">New File</button>
+        </div>
+      </div>
+    </div>
+
+
+    <div id="infos-field" class="ui header"></div>
+
+
+    <!-- credits modal box -->
+    <div id="credits-modal" class="modal hide">
       <div id="about" class="bd-infos">
         <p>
         We are using node <script>document.write(process.versions.node)</script>,
         Chromium <script>document.write(process.versions.chrome)</script>,
+        Exceljs, React, jQuery,
         and Electron <script>document.write(process.versions.electron)</script>. 
         </p>
         <p class="ui header">A project by Benjamin Dant</p>
@@ -27,7 +59,7 @@
     </div>
 
     <script type="text/javascript" src="./node_modules/jquery/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="./semantic/dist/semantic.min.js"></script>
+    <!-- <script type="text/javascript" src="./semantic/dist/semantic.min.js"></script> -->
   </body>
 
   <script>
